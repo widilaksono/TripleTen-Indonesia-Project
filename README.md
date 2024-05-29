@@ -1,13 +1,20 @@
-### Menganalisis Risiko Gagal Bayar: Studi Kasus Bank Syariah
+## Pendahuluan <a id='intro'></a>
+Setiap kali kita melakukan analisis, kita perlu merumuskan beberapa hipotesis yang perlu kita uji lebih lanjut. Terkadang, pengujian yang kita lakukan membawa kita untuk menerima hipotesis tersebut. Namun di lain waktu, kita juga perlu menolaknya. Untuk membuat keputusan yang tepat dalam bisnis, kita harus memahami apakah asumsi yang kita buat sudah tepat atau belum.
 
-Sebuah `Bank Syariah` yang menerapkan akad syariah `agama islam` dalam proses bisnisnya dimana hanya menyediakan layanan jual beli, bukan akad peminjaman uang dengan riba terhadap pihak pertama (`developer/penjual`), kedua(`bank`) dan ketiga(`nasabah`). Nasabah yang menginginkan sesuatu namun terkendala biaya bisa menggunakan fasilitas ini, dimana barang dibeli oleh bank kemudian dijual kembali dengan margin yang lebih tinggi kepada nasabah dengan pembayaran cicil selama jangka waktu tertentu. Tugas kita adalah menyiapkan laporan untuk divisi bisnis suatu bank. Kita akan mencari tahu pengaruh status perkawinan seorang nasabah dan jumlah anak yang dimilikinya terhadap probabilitas gagal bayar dalam pelunasan cicilan. Pihak bank sudah memiliki beberapa data mengenai kelayakan nasabah.
+Dalam proyek kali ini, kita akan membandingkan preferensi musik dari pendengar di kota Springfield dan Shelbyville. Kita akan meninjau data sungguhan dari Y.Music untuk menguji beberapa hipotesis di bawah ini dan membandingkan perilaku pengguna pada kedua kota.
 
-Tujuan utama yang dilakukan adalah untuk mengetahui seberapa besar resiko `Gagal Bayar` yang dilakukan nasabah berdasarkan beberapa kategori diantaranya `Tingkat Pendapatan`, `Status Keluarga`, `Tujuan Cicilan` dan `Jumlah Anak` agar digunakan oleh perusahaan untuk menilai calon nasabahnya. Hipotesis yang dibuat untuk analisa `Gagal Bayar` diantaranya:
-- Apakah benar bahwa peringkat tertinggi `Gagal Bayar` oleh nasabah dengan `Tingkat Pendapatan Rendah`?
-- Apakah benar bahwa peringkat tertinggi `Gagal Bayar` oleh nasabah dengan status keluarga `Unmarried`?
-- Apakah benar bahwa peringkat tertinggi `Gagal Bayar` oleh nasabah dengan tujuan kredit `Keperluan Estate`?
-- Apakah benar bahwa peringkat tertinggi `Gagal Bayar` oleh nasabah dengan nasabah yang `Tidak Mempunyai Anak`?
+### Tujuan:
+Menguji tiga hipotesis:
+1. Aktivitas pengguna berbeda-beda tergantung pada hari dan kotanya.
+2. Pada hari Senin pagi, penduduk Springfield dan Shelbyville mendengarkan genre yang berbeda. Hal ini juga berlaku untuk hari Jumat malam.
+3. Pendengar di kota Springfield dan Shelbyville memiliki preferensi yang berbeda. Di Springfield, para pengguna lebih suka musik pop, sementara di Shelbyville musik rap memiliki lebih banyak penggemar.
 
-| Projek | Deskripsi | Modul |
-| ------- | ------- | ------- |
-| [Analisis Gagal Bayar Nasabah](https://github.com/fuadraharjo/TripleTen_IND/blob/main/Projek-01%20-%20Resiko%20Gagal%20Bayar/Analisis%20resiko%20gagal%20bayar%20-%20bank%20syariah.ipynb) | Mengetahui seberapa besar resiko `gagal bayar` nasabah berdasarkan kriteria: `tingkat pendapatan`, `status keluarga`, `tujuan cicilan` dan `jumlah anak` untuk menilai calon nasabah. | *pandas*, *numpy* |
+### Tahapan
+Data terkait perilaku pengguna disimpan dalam file `/datasets/music_project_en.csv`. Tidak ada informasi terkait kualitas data tersebut, karena itu kamu perlu memeriksanya terlebih dahulu sebelum menguji hipotesis.
+
+Pertama-tama, kamu akan mengevaluasi kualitas data dan melihat apakah masalahnya signifikan. Kemudian, selama pra-pemrosesan data, kamu akan mencoba mengatasi masalah yang paling serius.
+
+Proyek ini terdiri dari tiga tahap:
+ 1. Tinjauan data
+ 2. Pra-pemrosesan data
+ 3. Pengujian hipotesis
