@@ -13,4 +13,3 @@ Untuk menyelesaikan tugas ini, kita akan melakukan langkah-langkah berikut:
 - Menjalankan analisis data
 - Mengembangkan dan melatih model
 
-Kita lanjut ke tahap berikutnya.
